@@ -1,14 +1,18 @@
 Package: projectr
 Type: Package
-Title: This package will setup the folder structure for any data science project
+Title: A data science project starter-kit
 Version: 0.1.0
-Author@JR: person("Jeniffen", "Chandrabalan",
-                  email = "jeniffen.chandrabalan@redbull.com",
-                  role  = c("aut"))
+Author@R: 
+  person(given = "Jeniffen", 
+         family = "Chandrabalan",
+         role = c("aut"),
+         email = "jeniffen.chandrabalan@redbull.com")
 Description: This package will setup the initial folder structure of any lagrge
     scale data science project. It is supposed to serve as a skeleton and can be
-    easily modified according to the required need.
+    easily be modified according to the required need.
 License: MIT
+URL: https://github.com/Jeniffen/projectr
+BugReports: https://github.com/Jeniffen/projectr/issues
 Depends: R (>= 3.1.0)
 Encoding: UTF-8
 LazyData: true
