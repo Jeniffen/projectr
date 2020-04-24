@@ -1,0 +1,14 @@
+Package: projectr
+Type: Package
+Title: This package will setup the folder structure for any data science project
+Version: 0.1.0
+Author@JR: person("Jeniffen", "Chandrabalan",
+                  email = "jeniffen.chandrabalan@redbull.com",
+                  role  = c("aut"))
+Description: This package will setup the initial folder structure of any lagrge
+    scale data science project. It is supposed to serve as a skeleton and can be
+    easily modified according to the required need.
+License: MIT
+Depends: R (>= 3.1.0)
+Encoding: UTF-8
+LazyData: true
