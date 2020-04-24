@@ -1,7 +1,0 @@
-#' This is a Roxygen test documentation
-#'
-#' @return
-#' A printed string
-hello <- function() {
-  print("Hello, world!")
-}
