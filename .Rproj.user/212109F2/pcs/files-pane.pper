@@ -1,6 +1,10 @@
 {
-    "path" : "~/Projects/projectr",
+    "path" : "~/Projects/projectr/man",
     "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 1
+        },
         {
             "ascending" : true,
             "columnIndex" : 2
