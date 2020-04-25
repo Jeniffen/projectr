@@ -8,9 +8,14 @@
 #' A set of folders created in project root
 #'
 #' @export
-give_me_wings <- function() {
+set_me_up <- function() {
 
   # function to create folder_structure
   invisible(lapply(folder_structure, dir.create))
+
+  # Provide README.Rmd for initial setup
+  system.file("README.Rmd", package = "projectr") %>%
+    file.copy("./") %>%
+    invisible()
 
 }
