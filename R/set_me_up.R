@@ -2,9 +2,9 @@
 #'
 #' @description
 #' This function will create a folder structure starting from the project root
-#' that is necessary for a data science project
+#' that is necessary for a data science project.
 #'
-#' @param projectname A charater string of the project title
+#' @param projectname A character string of the project title
 #'
 #' @return
 #' A set of folders created in project root
