@@ -12,7 +12,7 @@
 #' @export
 set_me_up <- function(projectname = "Template Project") {
 
-  # function to create folder_structure
+  # Create folder structure
   invisible(lapply(folder_structure, dir.create))
 
   # Provide README.Rmd for initial setup
