@@ -2,3 +2,4 @@
 
 export(set_me_up)
 importFrom(magrittr,"%>%")
+importFrom(rmarkdown,render)

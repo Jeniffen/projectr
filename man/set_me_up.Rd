@@ -4,7 +4,10 @@
 \alias{set_me_up}
 \title{Create folder structure}
 \usage{
-set_me_up()
+set_me_up(projectname = "Template Project")
+}
+\arguments{
+\item{projectname}{A charater string of the project title}
 }
 \value{
 A set of folders created in project root
