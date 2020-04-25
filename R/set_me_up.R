@@ -7,6 +7,8 @@
 #' @return
 #' A set of folders created in project root
 #'
+#' @importFrom magrittr %>%
+#'
 #' @export
 set_me_up <- function() {
 
