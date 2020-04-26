@@ -17,6 +17,10 @@ set_me_up <- function(projectname = "Template Project") {
 
   # Provide README.Rmd for initial setup
   readme_rmd_path <- system.file(
+      "rmarkdown",
+      "templates",
+      "readme",
+      "skeleton",
       "README.Rmd",
        package = "projectr"
     ) %>%
@@ -25,7 +29,8 @@ set_me_up <- function(projectname = "Template Project") {
 
   # Create custom README.md
   render(input  = "./README.Rmd",
-         params = list(projectname = projectname)
+         params = list(projectname = projectname),
+         quiet = TRUE
   )
 
 }
