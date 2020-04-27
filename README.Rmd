@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 ## Overview 
 
 The projectr package is designed to be a lightweight package, with the single 
-goal of taking away the hasse of creating the __right__ folder structure for 
+goal of taking away the hasse of creating the _right_ folder structure for 
 any data science project. The boilerpalte being provided, any project can then 
 be customized or enhanced to special needs and requirements. 
 
