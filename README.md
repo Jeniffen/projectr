@@ -18,7 +18,8 @@ requirements.
 The resulting folder structure is insprired by [Coockiecutter Data
 Science](https://tinyurl.com/y89ay63o) and Edward Ma’s
 [blogpost](https://tinyurl.com/ybghtonj) on managing your data science
-project early on.
+project early on. Further adjuments were made based on feedback by the
+data science community.
 
 ## Installation
 
