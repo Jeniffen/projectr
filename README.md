@@ -9,8 +9,8 @@
 
 ## Overview
 
-The projectr package is designed to be a lightweight package, with the
-single goal of taking away the hasse of creating the *right* folder
+The **projectr** package is designed to be a lightweight package, with
+the single goal of taking away the hassle of creating the *right* folder
 structure for any data science project. The boilerpalte being provided,
 any project can then be customized or enhanced to special needs and
 requirements.
