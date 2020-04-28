@@ -61,3 +61,8 @@ projectr::set_me_up()
         ├── 02_processing
         ├── 03_modelling
         └── 04_visualization
+
+## Code of Conduct
+
+Please note that the tidyverse project is released with a [Contributor Code of Conduct](#). 
+By contributing to this project, you agree to abide by its terms.
