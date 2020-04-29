@@ -42,14 +42,14 @@ projectr::set_me_up("my_project")
 #> ¦                                                                       
 #> +-- data                     # The root folder for data                 
 #> ¦   +-- 01_raw               # Folder for all your raw data             
-#> ¦   +-- 02_intermediate      # Folder for preprocessed data             
+#> ¦   +-- 02_intermediate      # Folder for pre-processed data            
 #> ¦   +-- 03_processed         # Folder for fully processed data          
 #> ¦   +-- 04_predictions       # Folder to save predictions               
 #> ¦                                                                       
 #> +-- model                    # Folder to store all your models          
 #> ¦                                                                       
 #> +-- notebooks                # Root folder for notebooks and Rmd files  
-#> ¦   +-- eda                  # Folder for explorative data analysis     
+#> ¦   +-- eda                  # Folder for exploratory data analysis     
 #> ¦   +-- misc                 # Folder to try things out or stuff        
 #> ¦                                                                       
 #> +-- references               # Root folder for all explanatory files    
