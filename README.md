@@ -36,7 +36,7 @@ devtools::install_github("Jeniffen/projectr")
 ``` r
 projectr::set_me_up("my_project")
 #> Your project has been successfully created!
-#> Find below an ouline of your structure:
+#> Find below an outline of your structure:
 #> 
 #> my_project                   # This is your project root                
 #> ¦                                                                       

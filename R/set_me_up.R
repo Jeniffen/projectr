@@ -61,7 +61,7 @@ set_me_up <- function(projectname = "Template Project") {
   )
 
   cat("Your project has been successfully created!"   ,
-      "Find below an ouline of your structure:"       ,
+      "Find below an outline of your structure:"      ,
        ""                                             ,
       structure                                       ,
       ""                                              ,
