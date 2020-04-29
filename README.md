@@ -34,35 +34,43 @@ devtools::install_github("Jeniffen/projectr")
 ## Usage
 
 ``` r
-projectr::set_me_up()
-```
+projectr::set_me_up("my_project")
 
-    project
-    │
-    ├── data
-    │   ├── 01_raw
-    │   ├── 02_intermediate
-    │   ├── 03_processed
-    │   └── 04_predictions 
-    │   
-    ├── model
-    │
-    ├── notebooks
-    │   ├── eda
-    │   └── misc
-    │
-    ├── references
-    │   ├── codebooks
-    │   └── docs
-    │       └── figures
-    │
-    └── src
-        ├── 01_preparation
-        ├── 02_processing
-        ├── 03_modelling
-        └── 04_visualization
+
+#> Your project has been successfully created!
+#> Find below an ouline of your structure:
+#> 
+#> 
+#> my_project               
+#> ¦                        
+#> +-- data                 
+#> ¦   +-- 01_raw           
+#> ¦   +-- 02_intermediate  
+#> ¦   +-- 03_processed     
+#> ¦   +-- 04_predictions   
+#> ¦                        
+#> +-- model                
+#> ¦                        
+#> +-- notebooks            
+#> ¦   +-- eda              
+#> ¦   +-- misc             
+#> ¦                        
+#> +-- references           
+#> ¦   +-- codebooks        
+#> ¦   +-- docs             
+#> ¦       +-- figures      
+#> ¦                        
+#> +-- src                  
+#>     +-- 01_preparation   
+#>     +-- 02_processing    
+#>     +-- 03_modelling     
+#>     +-- 04_visualization 
+#> 
+#> Good luck!
+```
 
 ## Code of Conduct
 
-Please note that the projectr project is released with a [Contributor Code of Conduct](#). 
-By contributing to this project, you agree to abide by its terms.
+Please note that the projectr project is released with a [Contributor
+Code of Conduct](#). By contributing to this project, you agree to abide
+by its terms.

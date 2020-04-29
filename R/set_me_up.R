@@ -33,4 +33,44 @@ set_me_up <- function(projectname = "Template Project") {
          quiet = TRUE
   )
 
+  structure <- c(
+    "my_project               ",
+    "│                        ",
+    "├── data                 ",
+    "│   ├── 01_raw           ",
+    "│   ├── 02_intermediate  ",
+    "│   ├── 03_processed     ",
+    "│   └── 04_predictions   ",
+    "│                        ",
+    "├── model                ",
+    "│                        ",
+    "├── notebooks            ",
+    "│   ├── eda              ",
+    "│   └── misc             ",
+    "│                        ",
+    "├── references           ",
+    "│   ├── codebooks        ",
+    "│   └── docs             ",
+    "│       └── figures      ",
+    "│                        ",
+    "└── src                  ",
+    "    ├── 01_preparation   ",
+    "    ├── 02_processing    ",
+    "    ├── 03_modelling     ",
+    "    └── 04_visualization "
+  )
+
+  cat("Your project has been successfully created!"   ,
+      "Find below an ouline of your structure:"       ,
+                                                  "\n",
+      structure                                       ,
+                                                  "\n",
+      "Good luck!"                                    ,
+      sep = "\n"
+  )
+
+
+
 }
+
+
