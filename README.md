@@ -64,5 +64,5 @@ projectr::set_me_up()
 
 ## Code of Conduct
 
-Please note that the tidyverse project is released with a [Contributor Code of Conduct](#). 
+Please note that the projectr project is released with a [Contributor Code of Conduct](#). 
 By contributing to this project, you agree to abide by its terms.
