@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](#)
 <!-- badges: end -->
 
 ## Overview
@@ -28,7 +30,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("Jeniffen/projectr")
+remotes::install_github("Jeniffen/projectr")
 ```
 
 ## Usage
