@@ -17,14 +17,14 @@ coverage](https://codecov.io/gh/Jeniffen/projectr/branch/master/graph/badge.svg)
 
 The **projectr** package is designed to be a lightweight package, with
 the single goal of taking away the hassle of creating the *right* folder
-structure for any data science project. The boilerpalte being provided,
-any project can then be customized or enhanced to special needs and
+structure for any data science project. With the boilerplate being
+provided, any project can be customized or enhanced to special needs and
 requirements.
 
-The resulting folder structure is insprired by [Coockiecutter Data
+The resulting folder structure is inspired by [Coockiecutter Data
 Science](https://tinyurl.com/y89ay63o) and Edward Ma’s
 [blogpost](https://tinyurl.com/ybghtonj) on managing your data science
-project early on. Further adjuments were made based on feedback by the
+project early on. Further adjustments were made based on feedback by the
 data science community.
 
 ## Installation
