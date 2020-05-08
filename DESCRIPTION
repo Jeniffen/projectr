@@ -18,7 +18,6 @@ Depends:
 Suggests: 
     testthat,
     covr,
-    here,
     fs
 Imports: 
     magrittr,

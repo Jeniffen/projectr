@@ -5,8 +5,12 @@ name: R-CMD-check
 jobs:
   R-CMD-check:
     runs-on: macOS-latest
+
     steps:
-      - uses: actions/checkout@v2
+
+      - uses: actions/checkout@master
+
+      - uses: r-lib/actions/setup-pandoc@v1
 
       - uses: r-lib/actions/setup-r@master
 
