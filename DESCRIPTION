@@ -17,7 +17,8 @@ Depends:
     R (>= 3.1.0)
 Suggests: 
     testthat,
-    covr
+    covr,
+    fs
 Imports: 
     magrittr,
     rmarkdown
