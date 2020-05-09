@@ -51,7 +51,7 @@ set_me_up <- function(projectname = "Template Project") {
 #'
 show_structure <- function(projectname) {
 
-  custom_tree <-  gsub("<projectname>", projectname, structure_tree)
+  custom_tree <- gsub("<projectname>", projectname, structure_tree)
 
   composed_structure <- nchar(custom_tree) %>%
     purrr::map(~strrep(" ", (30 - .x))) %>%
