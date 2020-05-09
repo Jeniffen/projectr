@@ -11,6 +11,7 @@
 #'
 #' @export
 set_me_up <- function(projectname = "Template Project") {
+
   # Create folder structure
   invisible(lapply(folder_structure, dir.create))
 
@@ -33,7 +34,7 @@ set_me_up <- function(projectname = "Template Project") {
   )
 
   projectname %>%
-    show_structure()
+    show_structure(.)
 }
 
 #' Output composed project structure description
@@ -49,16 +50,18 @@ set_me_up <- function(projectname = "Template Project") {
 #'A console output of the project structure
 #'
 show_structure <- function(projectname) {
-  composed_structure <- (30 - nchar(structure_tree)) %>%
-    purrr::map(~strrep(" ", .x)) %>%
+
+  custom_tree <-  gsub("<projectname>", projectname, structure_tree)
+
+  composed_structure <- nchar(custom_tree) %>%
+    purrr::map(~strrep(" ", (30 - .x))) %>%
     paste0(
-      structure_tree,
+      custom_tree,
       .,
       structure_description
     )
 
   composed_structure %>%
-    gsub("<projectname>", projectname, .) %>%
     cat(""                                            ,
         "Your project has been successfully created!" ,
         "Find below an outline of your structure:"    ,
