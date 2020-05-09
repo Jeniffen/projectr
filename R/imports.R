@@ -9,3 +9,6 @@ here::here
 
 #' @importFrom purrr map
 purrr::map
+
+#' @importFrom rlang .data
+rlang::.data

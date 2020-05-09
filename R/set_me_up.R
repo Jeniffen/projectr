@@ -33,26 +33,26 @@ set_me_up <- function(projectname = "Template Project") {
   )
 
   projectname %>%
-    show_structure(.)
+    show_structure()
 }
 
 
 show_structure <- function(projectname) {
 
   composed_structure <- (30 - nchar(structure_tree)) %>%
-    purrr::map(~strrep(" ", .)) %>%
+    purrr::map(~strrep(" ", .x)) %>%
     paste0(
       structure_tree,
-      .,
+      rlang::.data,
       structure_description
     )
 
   composed_structure %>%
-    gsub("<projectname>", projectname, .) %>%
+    gsub("<projectname>", projectname, rlang::.data) %>%
     cat("Your project has been successfully created!" ,
         "Find below an outline of your structure:"    ,
         ""                                            ,
-        .                                             ,
+        rlang::.data                                  ,
         ""                                            ,
         "Good luck!"                                  ,
         sep = "\n"
