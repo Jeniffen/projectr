@@ -5,6 +5,8 @@
 \alias{reexports}
 \alias{\%>\%}
 \alias{render}
+\alias{here}
+\alias{map}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -12,7 +14,11 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
+  \item{here}{\code{\link[here]{here}}}
+
   \item{magrittr}{\code{\link[magrittr]{\%>\%}}}
+
+  \item{purrr}{\code{\link[purrr]{map}}}
 
   \item{rmarkdown}{\code{\link[rmarkdown]{render}}}
 }}
