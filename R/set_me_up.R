@@ -53,18 +53,22 @@ show_structure <- function(projectname) {
     purrr::map(~strrep(" ", .x)) %>%
     paste0(
       structure_tree,
-      rlang::.data,
+      .,
       structure_description
     )
 
   composed_structure %>%
-    gsub("<projectname>", projectname, rlang::.data) %>%
-    cat("Your project has been successfully created!" ,
+    gsub("<projectname>", projectname, .) %>%
+    cat(""                                            ,
+        "Your project has been successfully created!" ,
         "Find below an outline of your structure:"    ,
         ""                                            ,
-        rlang::.data                                  ,
+        .                                             ,
         ""                                            ,
         "Good luck!"                                  ,
         sep = "\n"
     )
 }
+
+## Quites concerns of R CMD check re: the .'s that appear in pipelines
+if(getRversion() >= "3.6.2")  utils::globalVariables(c("."))
