@@ -46,7 +46,7 @@ projectr::set_me_up("my_project")
 #> 
 #> my_project                   # This is your project root                 
 #> ¦                                                                        
-#> +-- data                     # The root folder for data                  
+#> +-- data                     # Root folder for data                      
 #> ¦   +-- 01_raw               # Folder for all your raw data              
 #> ¦   +-- 02_intermediate      # Folder for pre-processed data             
 #> ¦   +-- 03_processed         # Folder for fully processed data           
