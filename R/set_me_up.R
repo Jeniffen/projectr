@@ -36,9 +36,19 @@ set_me_up <- function(projectname = "Template Project") {
     show_structure()
 }
 
-
+#' Output composed project structure description
+#'
+#' @description
+#' This is a helper function, to output a composed structure using the
+#' directory tree with the corresponding description and the projectname, that
+#' was specified by the user.
+#'
+#' @inheritParams set_me_up
+#'
+#'@return
+#'A console output of the project structure
+#'
 show_structure <- function(projectname) {
-
   composed_structure <- (30 - nchar(structure_tree)) %>%
     purrr::map(~strrep(" ", .x)) %>%
     paste0(
