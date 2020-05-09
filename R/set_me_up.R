@@ -16,7 +16,7 @@ set_me_up <- function(projectname = "Template Project") {
   invisible(lapply(folder_structure, dir.create))
 
   # Provide README.Rmd for initial setup
-  readme_rmd_path <- system.file(
+  system.file(
       "rmarkdown",
       "templates",
       "readme",
