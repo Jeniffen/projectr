@@ -17,12 +17,12 @@ set_me_up <- function(projectname = "Template Project") {
   if (!confirm_directory(projectname)) {
     return(
       cat(crayon::yellow(
-        c("I am sorry, your directory was not confirmed.",
+        c("Sorry, your directory was not confirmed.",
           "Your project was", crayon::red("not"), "setup!",
           "Try again when you are ready.", "\n",
           "\n",
-          "Hint: If you want to change your working directory in order to",
-          "creat your project somwhere else, you can do it like this: ", "\n",
+          "Hint: If you want to change your working directory for this project",
+          "do the following:", "\n",
           "\n",
           crayon::white(
             paste0("#> setwd(\"",
