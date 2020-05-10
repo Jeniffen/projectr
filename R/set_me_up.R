@@ -12,6 +12,15 @@
 #' @export
 set_me_up <- function(projectname = "Template Project") {
 
+  if (!confirm_directory()) {
+    return(
+      cat(crayon::yellow(
+        c("We are sorry, your working directory was not confirmed.",
+          "Your project was not setup! Try again when you are ready."))
+        )
+      )
+  }
+
   # Create folder structure
   invisible(lapply(folder_structure, dir.create))
 
@@ -72,6 +81,25 @@ show_structure <- function(projectname) {
         sep = "\n"
     )
 }
+
+
+
+confirm_directory <- function(){
+
+  cat("Your current working directory is:",
+      "",
+      crayon::green("#>", getwd()),
+      "",
+      "Do you want to setup your project here? (y/n)",
+      sep = "\n")
+
+  switch (tolower(readline(prompt = "")),
+          "y" = TRUE,
+          "n" = FALSE,
+          FALSE
+  )
+}
+
 
 ## Quites concerns of R CMD check re: the .'s that appear in pipelines
 if(getRversion() >= "3.6.2")  utils::globalVariables(c("."))
