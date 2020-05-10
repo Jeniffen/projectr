@@ -19,7 +19,7 @@ set_me_up <- function(projectname = "Template Project") {
   }
 
   # Create folder structure
-  purrr::map(folder_structure, dir.create)
+  purrr::walk(folder_structure, dir.create)
 
   # Provide README.Rmd for initial setup
   system.file(
@@ -59,7 +59,7 @@ show_structure <- function(projectname) {
   custom_tree <- gsub("<projectname>", projectname, structure_tree)
 
   composed_structure <- nchar(custom_tree) %>%
-    purrr::map(~strrep(" ", (30 - .x))) %>%
+    purrr::walk(~strrep(" ", (30 - .x))) %>%
     paste0(
       custom_tree,
       .,
