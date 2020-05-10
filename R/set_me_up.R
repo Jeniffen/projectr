@@ -12,9 +12,9 @@
 #' @export
 set_me_up <- function(projectname = "Template Project") {
 
-  projectname <- janitor::make_clean_names(projectname)
+  projectname_ <- janitor::make_clean_names(projectname)
 
-  if (!confirm_directory(projectname)) {
+  if (!confirm_directory(projectname_)) {
     return(unconfirmed_directory())
   }
 
@@ -39,7 +39,7 @@ set_me_up <- function(projectname = "Template Project") {
          quiet = TRUE
   )
 
-  projectname %>%
+  projectname_ %>%
     show_structure(.)
 }
 
