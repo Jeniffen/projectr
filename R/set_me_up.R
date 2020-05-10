@@ -68,7 +68,6 @@ show_structure <- function(projectname) {
     )
 
   structure_overview(composed_structure)
-
 }
 
 #' Prompt to confirm current working directory
@@ -79,7 +78,7 @@ show_structure <- function(projectname) {
 #' @inheritParams set_me_up
 #'
 #'@return
-#' A logical whether or not to set up the in the current working directory
+#' A logical whether or not to set up in the current working directory
 #'
 confirm_directory <- function(projectname){
 
