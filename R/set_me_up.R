@@ -15,22 +15,7 @@ set_me_up <- function(projectname = "Template Project") {
   projectname <- janitor::make_clean_names(projectname)
 
   if (!confirm_directory(projectname)) {
-    return(
-      cat(crayon::yellow(
-        c("Sorry, your directory was not confirmed.",
-          "Your project was", crayon::red("not"), "setup!",
-          "Try again when you are ready.", "\n",
-          "\n",
-          "Hint: If you want to change your working directory for this project",
-          "do the following:", "\n",
-          "\n",
-          paste0("#> setwd(\"",
-               file.path("This", "is", "the", "directory", "I", "want"),
-               "\")"
-          )
-        )
-      ))
-    )
+    return(unconfirmed_directory())
   }
 
   # Create folder structure
@@ -82,16 +67,8 @@ show_structure <- function(projectname) {
       structure_description
     )
 
-  composed_structure %>%
-    cat(""                                            ,
-        "Your project has been successfully created!" ,
-        "Find below an outline of your structure:"    ,
-        ""                                            ,
-        .                                             ,
-        ""                                            ,
-        "Good luck!"                                  ,
-        sep = "\n"
-    )
+  structure_overview(composed_structure)
+
 }
 
 #' Prompt to confirm current working directory
@@ -106,13 +83,7 @@ show_structure <- function(projectname) {
 #'
 confirm_directory <- function(projectname){
 
-  cat("Your project will be set up in the following directory:",
-      "",
-      file.path(crayon::green("#>", getwd()),
-                crayon::red(projectname)),
-      "",
-      "Do you want to proceed with the setup here? (y/n)",
-      sep = "\n")
+  directory_confirm(projectname)
 
   switch (tolower(readline(prompt = "")),
           "y" = TRUE,
