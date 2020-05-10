@@ -19,7 +19,7 @@ set_me_up <- function(projectname = "Template Project") {
   }
 
   # Create folder structure
-  invisible(lapply(folder_structure, dir.create))
+  purrr::map(folder_structure, dir.create)
 
   # Provide README.Rmd for initial setup
   system.file(
