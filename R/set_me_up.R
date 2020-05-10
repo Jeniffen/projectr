@@ -24,11 +24,9 @@ set_me_up <- function(projectname = "Template Project") {
           "Hint: If you want to change your working directory for this project",
           "do the following:", "\n",
           "\n",
-          crayon::white(
-            paste0("#> setwd(\"",
-                 file.path("This", "is", "the", "directory", "I", "want"),
-                 "\")"
-            )
+          paste0("#> setwd(\"",
+               file.path("This", "is", "the", "directory", "I", "want"),
+               "\")"
           )
         )
       ))
