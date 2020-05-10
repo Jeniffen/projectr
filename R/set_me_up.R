@@ -12,13 +12,27 @@
 #' @export
 set_me_up <- function(projectname = "Template Project") {
 
-  if (!confirm_directory()) {
+  projectname <- janitor::make_clean_names(projectname)
+
+  if (!confirm_directory(projectname)) {
     return(
       cat(crayon::yellow(
-        c("We are sorry, your working directory was not confirmed.",
-          "Your project was not setup! Try again when you are ready."))
+        c("I am sorry, your directory was not confirmed.",
+          "Your project was", crayon::red("not"), "setup!",
+          "Try again when you are ready.", "\n",
+          "\n",
+          "Hint: If you want to change your working directory in order to",
+          "creat your project somwhere else, you can do it like this: ", "\n",
+          "\n",
+          crayon::white(
+            paste0("#> setwd(\"",
+                 file.path("This", "is", "the", "directory", "I", "want"),
+                 "\")"
+            )
+          )
         )
-      )
+      ))
+    )
   }
 
   # Create folder structure
@@ -82,15 +96,24 @@ show_structure <- function(projectname) {
     )
 }
 
+#' Prompt to confirm current working directory
+#'
+#' @description
+#' This is a helper function, in order to confirm the current working directory
+#'
+#' @inheritParams set_me_up
+#'
+#'@return
+#' A logical whether or not to set up the in the current working directory
+#'
+confirm_directory <- function(projectname){
 
-
-confirm_directory <- function(){
-
-  cat("Your current working directory is:",
+  cat("Your project will be set up in the following directory:",
       "",
-      crayon::green("#>", getwd()),
+      file.path(crayon::green("#>", getwd()),
+                crayon::red(projectname)),
       "",
-      "Do you want to setup your project here? (y/n)",
+      "Do you want to proceed with the setup here? (y/n)",
       sep = "\n")
 
   switch (tolower(readline(prompt = "")),
