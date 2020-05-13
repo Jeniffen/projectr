@@ -7,6 +7,8 @@
 \alias{render}
 \alias{here}
 \alias{map}
+\alias{walk}
+\alias{make_clean_names}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -16,9 +18,11 @@ below to see their documentation.
 \describe{
   \item{here}{\code{\link[here]{here}}}
 
+  \item{janitor}{\code{\link[janitor]{make_clean_names}}}
+
   \item{magrittr}{\code{\link[magrittr]{\%>\%}}}
 
-  \item{purrr}{\code{\link[purrr]{map}}}
+  \item{purrr}{\code{\link[purrr]{map}}, \code{\link[purrr]{walk}}}
 
   \item{rmarkdown}{\code{\link[rmarkdown]{render}}}
 }}

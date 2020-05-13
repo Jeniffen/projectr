@@ -59,7 +59,7 @@ show_structure <- function(projectname) {
   custom_tree <- gsub("<projectname>", projectname, structure_tree)
 
   composed_structure <- nchar(custom_tree) %>%
-    purrr::walk(~strrep(" ", (30 - .x))) %>%
+    purrr::map(~strrep(" ", (30 - .x))) %>%
     paste0(
       custom_tree,
       .,

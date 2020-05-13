@@ -10,7 +10,7 @@ confirm_directory(projectname)
 \item{projectname}{A character string of the project title}
 }
 \value{
-A logical whether or not to set up the in the current working directory
+A logical whether or not to set up in the current working directory
 }
 \description{
 This is a helper function, in order to confirm the current working directory
