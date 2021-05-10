@@ -1,29 +1,56 @@
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 name: R-CMD-check
 
 jobs:
   R-CMD-check:
-    runs-on: macOS-latest
+
+    runs-on: ubuntu-16.04
 
     steps:
 
-      - uses: actions/checkout@master
+      - name: Checkout repository 🛎
+        uses: actions/checkout@v2
 
-      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Setup R 🔧
+        uses: r-lib/actions/setup-r@v1
 
-      - uses: r-lib/actions/setup-r@master
+      - name: Setup Pandoc 🔧
+        uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Install dependencies
+      - name: Query R dependencies 🔦
         run: |
-          install.packages(c("remotes", "rcmdcheck"))
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R dependencies 🗃
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install Linux dependencies 🔧
+        run: sudo apt-get install libcurl4-openssl-dev libxml2-dev
+
+      - name: Install R dependencies 🔧
+        run: |
+          install.packages(c("remotes", "rcmdcheck", "xml2"))
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Check
+      - name: Run R CMD check 🔍
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
 
-      - name: Test coverage
+      - name: Upload test coverage 📝
         run: covr::codecov()
         shell: Rscript {0}
