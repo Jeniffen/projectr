@@ -51,7 +51,7 @@ set_me_up <- function(projectname = "Template Project") {
 #'
 #' @inheritParams set_me_up
 #'
-#'@return
+#' @return
 #'A console output of the project structure
 #'
 show_structure <- function(projectname) {
@@ -89,7 +89,3 @@ confirm_directory <- function(projectname){
           FALSE
   )
 }
-
-
-## Quites concerns of R CMD check re: the .'s that appear in pipelines
-if(getRversion() >= "3.6.2")  utils::globalVariables(c("."))

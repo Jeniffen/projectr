@@ -3,7 +3,6 @@
 \docType{import}
 \name{reexports}
 \alias{reexports}
-\alias{\%>\%}
 \alias{render}
 \alias{here}
 \alias{map}
@@ -20,9 +19,7 @@ below to see their documentation.
 
   \item{janitor}{\code{\link[janitor]{make_clean_names}}}
 
-  \item{magrittr}{\code{\link[magrittr]{\%>\%}}}
-
-  \item{purrr}{\code{\link[purrr]{map}}, \code{\link[purrr]{walk}}}
+  \item{purrr}{\code{\link[purrr]{map}}, \code{\link[purrr:map]{walk}}}
 
   \item{rmarkdown}{\code{\link[rmarkdown]{render}}}
 }}

@@ -1,4 +1,4 @@
-# Read files in order to identidy what was created temporarily
+# Read files in order to identify what was created temporarily
 content_tmp_testfolder <- fs::dir_ls(testthat::test_path())
 
 # -------------------------------------------------------------------------
