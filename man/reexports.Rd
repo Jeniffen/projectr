@@ -3,7 +3,7 @@
 \docType{import}
 \name{reexports}
 \alias{reexports}
-\alias{\%>\%}
+\alias{.data}
 \alias{render}
 \alias{here}
 \alias{map}
@@ -16,9 +16,9 @@ below to see their documentation.
 \describe{
   \item{here}{\code{\link[here]{here}}}
 
-  \item{magrittr}{\code{\link[magrittr]{\%>\%}}}
-
   \item{purrr}{\code{\link[purrr]{map}}}
+
+  \item{rlang}{\code{\link[rlang:tidyeval-data]{.data}}}
 
   \item{rmarkdown}{\code{\link[rmarkdown]{render}}}
 }}

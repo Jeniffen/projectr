@@ -1,5 +1,5 @@
-#' @importFrom magrittr %>%
-magrittr::`%>%`
+#' @importFrom  rlang .data
+rlang::.data
 
 #' @importFrom rmarkdown render
 rmarkdown::render

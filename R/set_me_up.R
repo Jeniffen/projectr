@@ -11,7 +11,6 @@
 #'
 #' @export
 set_me_up <- function(projectname = "Template Project") {
-
   # Create folder structure
   invisible(lapply(folder_structure, dir.create))
 
@@ -34,7 +33,7 @@ set_me_up <- function(projectname = "Template Project") {
   )
 
   projectname %>%
-    show_structure(.)
+    show_structure()
 }
 
 #' Output composed project structure description
@@ -46,7 +45,7 @@ set_me_up <- function(projectname = "Template Project") {
 #'
 #' @inheritParams set_me_up
 #'
-#'@return
+#' @return
 #'A console output of the project structure
 #'
 show_structure <- function(projectname) {
@@ -66,12 +65,9 @@ show_structure <- function(projectname) {
         "Your project has been successfully created!" ,
         "Find below an outline of your structure:"    ,
         ""                                            ,
-        .                                             ,
+        .                                         ,
         ""                                            ,
         "Good luck!"                                  ,
         sep = "\n"
     )
 }
-
-## Quites concerns of R CMD check re: the .'s that appear in pipelines
-if(getRversion() >= "3.6.2")  utils::globalVariables(c("."))
