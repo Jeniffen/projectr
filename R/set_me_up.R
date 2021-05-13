@@ -10,7 +10,8 @@
 #' A set of folders created in project root
 #'
 #' @export
-set_me_up <- function(projectname = "Template Project") {
+set_me_up <- function(projectname = "Template Project",
+                      structure_file = NULL) {
 
   projectname_ <- janitor::make_clean_names(projectname)
 
@@ -18,8 +19,18 @@ set_me_up <- function(projectname = "Template Project") {
     return(unconfirmed_directory())
   }
 
+  if(is.null(structure_file)) {
+    fs_structure <- system.file(
+        "json",
+        "folder_structure.json",
+        package = "projectr"
+      ) %>%
+      jsonlite::read_json() %>%
+      create_structure()
+  }
+
   # Create folder structure
-  purrr::walk(folder_structure, dir.create)
+  purrr::walk(here::here(projectname_, fs_structure), fs::dir_create)
 
   # Provide README.Rmd for initial setup
   system.file(
@@ -30,62 +41,15 @@ set_me_up <- function(projectname = "Template Project") {
       "README.Rmd",
        package = "projectr"
     ) %>%
-    file.copy(here::here()) %>%
+    file.copy(here::here(projectname_)) %>%
     invisible()
 
   # Create custom README.md
-  render(input  = here::here("README.Rmd"),
-         params = list(projectname = projectname),
+  render(input  = here::here(projectname_, "README.Rmd"),
+         params = list(projectname = projectname_),
          quiet = TRUE
   )
 
   show_structure(projectname_)
 }
 
-#' Output composed project structure description
-#'
-#' @description
-#' This is a helper function, to output a composed structure using the
-#' directory tree with the corresponding description and the projectname, that
-#' was specified by the user.
-#'
-#' @inheritParams set_me_up
-#'
-#' @return
-#'A console output of the project structure
-#'
-show_structure <- function(projectname) {
-
-  custom_tree <- gsub("<projectname>", projectname, structure_tree)
-
-  composed_structure <- nchar(custom_tree) %>%
-    purrr::map(~strrep(" ", (30 - .x))) %>%
-    paste0(
-      custom_tree,
-      .,
-      structure_description
-    )
-
-  structure_overview(composed_structure)
-}
-
-#' Prompt to confirm current working directory
-#'
-#' @description
-#' This is a helper function, in order to confirm the current working directory
-#'
-#' @inheritParams set_me_up
-#'
-#'@return
-#' A logical whether or not to set up in the current working directory
-#'
-confirm_directory <- function(projectname){
-
-  directory_confirm(projectname)
-
-  switch (tolower(readline(prompt = "")),
-          "y" = TRUE,
-          "n" = FALSE,
-          FALSE
-  )
-}

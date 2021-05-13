@@ -18,8 +18,7 @@ directory_confirm <- function(projectname) {
 
   cat("Your project will be set up in the following directory:",
       "",
-      file.path(crayon::green("#>", getwd()),
-                crayon::red(projectname)),
+      file.path("#>", getwd(), crayon::green(projectname)),
       "",
       "Do you want to proceed with the setup here? (y/n)",
       sep = "\n"
