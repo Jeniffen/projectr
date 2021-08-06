@@ -65,7 +65,7 @@ show_structure <- function(projectname) {
         "Your project has been successfully created!" ,
         "Find below an outline of your structure:"    ,
         ""                                            ,
-        .                                         ,
+        .                                             ,
         ""                                            ,
         "Good luck!"                                  ,
         sep = "\n"
