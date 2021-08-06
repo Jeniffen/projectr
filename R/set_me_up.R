@@ -29,7 +29,7 @@ set_me_up <- function(projectname = "Template Project") {
   # Create custom README.md
   render(input  = here::here("README.Rmd"),
          params = list(projectname = projectname),
-         quiet = TRUE
+         quiet  = TRUE
   )
 
   projectname %>%
