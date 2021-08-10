@@ -28,8 +28,6 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
-
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -48,6 +46,12 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+<li>
+  <a href="index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -73,27 +77,27 @@
   <div class="contents col-md-9">
 <div id="projectr-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#projectr-" class="anchor" aria-hidden="true"></a>projectr <a href="#"><img src="reference/figures/logo.png" align="right" height="138.5"></a>
+<a href="#projectr-" class="anchor"></a>projectr <a href="#"><img src="reference/figures/logo.png" align="right" height="138.5"></a>
 </h1></div>
 <!-- badges: start -->
 
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
-<a href="#overview" class="anchor" aria-hidden="true"></a>Overview</h2>
+<a href="#overview" class="anchor"></a>Overview</h2>
 <p>The <strong>projectr</strong> package is designed to be a lightweight package, with the single goal of taking away the hassle of creating the <em>right</em> folder structure for any data science project. With the boilerplate being provided, any project can be customized or enhanced to special needs and requirements.</p>
-<p>The resulting folder structure is inspired by <a href="https://tinyurl.com/y89ay63o" class="external-link">Coockiecutter Data Science</a> and Edward Ma’s <a href="https://tinyurl.com/ybghtonj" class="external-link">blogpost</a> on managing your data science project early on. Further adjustments were made based on feedback by the data science community.</p>
+<p>The resulting folder structure is inspired by <a href="https://tinyurl.com/y89ay63o">Coockiecutter Data Science</a> and Edward Ma’s <a href="https://tinyurl.com/ybghtonj">blogpost</a> on managing your data science project early on. Further adjustments were made based on feedback by the data science community.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
-<p>You can install the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Jeniffen/projectr"</span><span class="op">)</span></code></pre></div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"Jeniffen/projectr"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
-<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
+<a href="#usage" class="anchor"></a>Usage</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">projectr</span><span class="fu">::</span><span class="fu"><a href="reference/set_me_up.html">set_me_up</a></span><span class="op">(</span><span class="st">"my_project"</span><span class="op">)</span>
 <span class="co">#&gt; Your project has been successfully created!</span>
@@ -129,7 +133,7 @@
 </div>
 <div id="code-of-conduct" class="section level2">
 <h2 class="hasAnchor">
-<a href="#code-of-conduct" class="anchor" aria-hidden="true"></a>Code of Conduct</h2>
+<a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
 <p>Please note that the projectr project is released with a <a href="#">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
@@ -137,7 +141,7 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2 data-toc-skip>Links</h2>
+<h2>Links</h2>
 <ul class="list-unstyled">
 <li>Browse source code at <br><a href="https://github.com/Jeniffen/projectr/">https://​github.com/​Jeniffen/​projectr/​</a>
 </li>
@@ -145,45 +149,39 @@
 </li>
 </ul>
 </div>
-
 <div class="license">
-<h2 data-toc-skip>License</h2>
+<h2>License</h2>
 <ul class="list-unstyled">
 <li>
 <a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
-
-
 <div class="developers">
-<h2 data-toc-skip>Developers</h2>
+<h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Jeniffen Chandrabalan <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
 
-<div class="dev-status">
-<h2 data-toc-skip>Dev status</h2>
+  <div class="dev-status">
+<h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="#"><img src="https://img.shields.io/badge/lifecycle-experimental-orange" alt="Lifecycle: experimental"></a></li>
-<li><a href="https://github.com/Jeniffen/projectr/actions" class="external-link"><img src="https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/Jeniffen/projectr?branch=master" class="external-link"><img src="https://codecov.io/gh/Jeniffen/projectr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/Jeniffen/projectr/actions"><img src="https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/gh/Jeniffen/projectr?branch=master"><img src="https://codecov.io/gh/Jeniffen/projectr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
-
-  </div>
+</div>
 </div>
 
 
       <footer><div class="copyright">
-  <p></p>
-<p>Developed by Jeniffen Chandrabalan.</p>
+  <p>Developed by Jeniffen Chandrabalan.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
@@ -191,8 +189,6 @@
 
   
 
-
-  
 
   </body>
 </html>
