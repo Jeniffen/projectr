@@ -30,8 +30,7 @@ data science community.
 
 ## Installation
 
-You can install the development version from
-[GitHub](https://github.com/) with:
+You can install the development version from GitHub with:
 
 ``` r
 # install.packages("devtools")
