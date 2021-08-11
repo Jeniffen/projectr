@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](#)
+[![version](https://img.shields.io/badge/version-0.1.0-green%22)](https://github.com/Jeniffen/projectr/releases/tag/v0.1.0)
 [![R build status](https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg)](https://github.com/Jeniffen/projectr/actions)
 [![Codecov test coverage](https://codecov.io/gh/Jeniffen/projectr/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeniffen/projectr?branch=master)
 <!-- badges: end -->

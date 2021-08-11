@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](#)
+[![version](https://img.shields.io/badge/version-0.1.0-green%22)](https://github.com/Jeniffen/projectr/releases/tag/v0.1.0)
 [![R build
 status](https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg)](https://github.com/Jeniffen/projectr/actions)
 [![Codecov test
