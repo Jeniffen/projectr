@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](#)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![version](https://img.shields.io/badge/version-0.1.0-green%22)](https://github.com/Jeniffen/projectr/releases/tag/v0.1.0)
 [![R build
 status](https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg)](https://github.com/Jeniffen/projectr/actions)

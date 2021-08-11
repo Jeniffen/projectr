@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # projectr <a href='#'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](#)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![version](https://img.shields.io/badge/version-0.1.0-green%22)](https://github.com/Jeniffen/projectr/releases/tag/v0.1.0)
 [![R build status](https://github.com/Jeniffen/projectr/workflows/R-CMD-check/badge.svg)](https://github.com/Jeniffen/projectr/actions)
 [![Codecov test coverage](https://codecov.io/gh/Jeniffen/projectr/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeniffen/projectr?branch=master)
