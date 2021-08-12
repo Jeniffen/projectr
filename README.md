@@ -33,7 +33,7 @@ data science community.
 You can install the development version from GitHub with:
 
 ``` r
-# install.packages("devtools")
+# install.packages("remotes")
 remotes::install_github("Jeniffen/projectr")
 ```
 
