@@ -2,9 +2,4 @@
 
 export("%>%")
 export(set_me_up)
-import(utils)
-importFrom(here,here)
 importFrom(magrittr,"%>%")
-importFrom(purrr,map)
-importFrom(rlang,.data)
-importFrom(rmarkdown,render)
