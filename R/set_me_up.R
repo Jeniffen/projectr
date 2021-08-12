@@ -16,14 +16,7 @@ set_me_up <- function(projectname = "Template Project") {
   purrr::walk(folder_structure, dir.create)
 
   # Provide README.Rmd for initial setup
-  system.file(
-      "rmarkdown",
-      "templates",
-      "readme",
-      "skeleton",
-      "README.Rmd",
-      package = "projectr"
-    ) %>%
+  system.file("templates", "README.Rmd", package = "projectr") %>%
     file.copy(here::here())
 
   # Create custom README.md
