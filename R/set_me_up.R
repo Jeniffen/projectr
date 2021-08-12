@@ -1,13 +1,13 @@
 #' Create folder structure
 #'
 #' @description
-#' This function will create a folder structure starting from the project root
-#' that is necessary for a data science project.
+#' This function will create a folder structure that is needed for a data
+#' science project, starting from the current directory.
 #'
 #' @param projectname A character string of the project title
 #'
 #' @return
-#' A set of folders created in project root
+#' A set of folders created in current directory
 #'
 #' @export
 set_me_up <- function(projectname = "Template Project") {
@@ -30,7 +30,7 @@ set_me_up <- function(projectname = "Template Project") {
     .show_structure()
 }
 
-# Output composed project structure description
+# Print console output of composed project structure and description
 #
 .show_structure <- function(projectname) {
 

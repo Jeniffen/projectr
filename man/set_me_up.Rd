@@ -10,9 +10,9 @@ set_me_up(projectname = "Template Project")
 \item{projectname}{A character string of the project title}
 }
 \value{
-A set of folders created in project root
+A set of folders created in current directory
 }
 \description{
-This function will create a folder structure starting from the project root
-that is necessary for a data science project.
+This function will create a folder structure that is needed for a data
+science project, starting from the current directory.
 }
