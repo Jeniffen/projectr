@@ -24,7 +24,6 @@ Imports:
     here,
     purrr,
     fs,
-    rlang,
     utils
 Encoding: UTF-8
 LazyData: true
