@@ -26,8 +26,7 @@ set_me_up <- function(projectname = "Template Project") {
       quiet  = TRUE
     )
 
-  projectname %>%
-    .show_structure()
+  .show_structure(projectname)
 }
 
 # Print console output of composed project structure and description
